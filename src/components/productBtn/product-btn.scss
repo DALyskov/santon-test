@@ -1,0 +1,62 @@
+.product-btn {
+
+  position: relative;
+  width: 24px;
+  height: 23px;
+  margin-bottom: 5px;
+  padding: 0;
+
+  background-color: black;
+  border: 0;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+
+    top: 10px;
+  }
+
+  &--add::after {
+    transform: rotate(90deg);
+  }
+
+  &--del::before {
+    transform: rotate(45deg);
+  }
+
+  &--del::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
